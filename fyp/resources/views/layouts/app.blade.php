@@ -68,7 +68,7 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                   document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
@@ -82,6 +82,14 @@
             </div>
         </div>
     </nav>
+    <div align="center" style="height:70%">
+        <h1>Welcome to the Open House!</h1>
+        <p>
+            Explore the innovative Final Year Projects (FYPs) showcased by our talented students.
+            Industry and academia evaluators are assigned to assess these projects based on their expertise.
+            Check out the amazing work and contribute to the success of our Open House event!
+        </p>
+    </div>
 
     <main class="py-4">
         @yield('content')
