@@ -39,7 +39,21 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function evaluatorPreferences()
+    {
+        return $this->hasOne(EvaluatorPreferences::class);
+    }
+
+    public function projectAssignments()
+    {
+        return $this->hasMany(ProjectAssignment::class, 'evaluator_id');
+    }
+
+    public function student()
+    {
+        return $this->hasOne(Student::class);
+    }
 }
